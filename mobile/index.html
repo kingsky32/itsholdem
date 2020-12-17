@@ -32,10 +32,41 @@
     <link rel="stylesheet" href="/assets/css/mobile.css" />
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
   </head>
   <body>
+    <script>
+      function menuOpenFn(el) {
+        document.querySelector(el).classList.add("open");
+      }
+
+      function menuCloseFn(el) {
+        document.querySelector(el).classList.remove("open");
+      }
+    </script>
     <div id="wrapper">
-      <header></header>
+      <header>
+        <button id="menu-open-button" onclick="menuOpenFn('#gnb')">
+          <img src="/assets/images/m_header_open_button.png" alt="menu_open_button" />
+        </button>
+        <h1><img src="/assets/images/m_logo.png" alt="Logo" /></h1>
+      </header>
+      <nav id="gnb">
+        <div class="navigation">
+          <h1><img src="/assets/images/m_logo_2.png" alt="Logo_2" /></h1>
+          <button id="menu-close-button" onclick="menuCloseFn('#gnb')">
+            <img src="/assets/images/m_header_close_button.png" alt="menu_close_button" />
+          </button>
+          <ul>
+            <li><a href="#section-3">전문가 교육</a></li>
+            <li><a href="#section-7">리폼창업</a></li>
+            <li><a href="#section-9">대박상권분석</a></li>
+            <li><a href="#section-11">다양한 먹거리</a></li>
+            <li><a href="#section-12">창업절차</a></li>
+            <li><a href="#section-16">성공창업문의</a></li>
+          </ul>
+        </div>
+      </nav>
       <main>
         <section id="main-visual">
           <img src="/assets/images/m_main_visual.png" alt="main-visual" />
@@ -300,6 +331,7 @@
                   name="holdem_submit_phone"
                   id="holdem-submit-phone"
                   value=""
+                  class="holdem_m_submit_phone"
                   maxlength="13"
                   required=""
                 />
@@ -588,6 +620,7 @@
                   type="tel"
                   name="holdem_submit_phone"
                   id="section-16-holdem-submit-phone"
+                  class="holdem_m_submit_phone"
                   value=""
                   maxlength="13"
                   required=""
